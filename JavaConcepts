@@ -52,3 +52,23 @@
  Finally block
  Throw Keyword
  Throws Keyword
+ . Multi-threading in Java and Synchronization
+ Life cycle of a thread
+ Thread Creation
+ Sleeping a thread
+ run() method
+ Daemon thread
+ Thread pool
+ Thread group
+ Garbage Collection
+ Synchronization in Java
+ Dead lock in Java
+9. Java I/O and Serialization
+ Java Input/Output
+ File Input/Output Streams
+ Buffered Input/Output Streams
+ File Permission
+ Writer/Reader
+ File
+ Java Serialization
+ Java Transient keyword
