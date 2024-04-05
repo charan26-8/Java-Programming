@@ -93,5 +93,46 @@ public class Main {
         }
     }
 }
+//All numbers in NumberLand are standing in a circle for a dancing ceremony. Every number
+needs a dancing partner. Dancing partner of any number is the number which is standing
+radially opposite to it in the circle. The numbers are from 0 to N-1. A certain number X
+wants to know who will be its dancing partner. Please help X.
+Input
+Two positive integers denoting the value of N and X.
+Output
+Print the number radially opposite to X in a circle of N numbers.
+//
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt(); // Total number of numbers in the circle
+        int x = scanner.nextInt(); // The number for which we need to find the partner
+
+        // Calculate the number radially opposite to X
+        int oppositeNumber = (x + n / 2) % n;
+
+        System.out.println(oppositeNumber);
+    }
+}
+//Print an integer denoting temperature in Fahrenheit.
+Constraints
+0<=T<=1000
+Sample Input
+100
+Sample Output
+212//
+sol:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int celsius = scanner.nextInt();
+        int fahrenheit = (celsius * 9/5) + 32;
+         System.out.println(fahrenheit);
+       } 
+}
+
 
 
