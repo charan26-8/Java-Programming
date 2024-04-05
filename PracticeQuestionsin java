@@ -1,4 +1,4 @@
-//pattern program
+1.//pattern program
 public class Main
 {
 	public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class Main
 	    }
 	}
 }
-//Prime in the range
+2.//Prime in the range
 class Main{
     public static void main (String[] args) {
         int i,j;
@@ -37,7 +37,7 @@ class Main{
             
     }
 }
-//Find prime or not
+3.//Find prime or not
 import java.util.Scanner;
 class Main{
     public static void main (String[] args) {
@@ -65,7 +65,7 @@ class Main{
        }
     }
 }
-//Even or Odd
+4.//Even or Odd
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -93,7 +93,7 @@ public class Main {
         }
     }
 }
-//All numbers in NumberLand are standing in a circle for a dancing ceremony. Every number
+5.//All numbers in NumberLand are standing in a circle for a dancing ceremony. Every number
 needs a dancing partner. Dancing partner of any number is the number which is standing
 radially opposite to it in the circle. The numbers are from 0 to N-1. A certain number X
 wants to know who will be its dancing partner. Please help X.
@@ -115,7 +115,7 @@ public class Main {
         System.out.println(oppositeNumber);
     }
 }
-//Print an integer denoting temperature in Fahrenheit.
+6.//Print an integer denoting temperature in Fahrenheit.
 Constraints
 0<=T<=1000
 Sample Input
