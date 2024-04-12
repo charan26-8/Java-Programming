@@ -20,7 +20,7 @@ public class ComparatorInterface{
 
         Collections.sort(al,com);
         for(Laptop2 st:al){
-            System.out.println(st);//comparable interface in java means to sort the elements in the use-defined manner
+            System.out.println(st);
 
         }
     }
