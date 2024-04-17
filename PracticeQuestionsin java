@@ -133,6 +133,36 @@ public class Main {
          System.out.println(fahrenheit);
        } 
 }
+7.)Sample Input
+2
+abcde abc
+pqrst pr
+Sample Output
+Yes
+No
+sol:
+import java.util.Scanner;
+public class Substring {
+	public static void main(String[] args) {
+		
+	
+	Scanner scan=new Scanner(System.in);
+	
+	System.out.println("Enter a letters to check Whether it is substring or not:");
+	 
+	String input =scan.next();
+	String subString=scan.next();
+	
+	if(input.contains(subString)) {
+		System.out.println("Yes");
+		
+	}else {
+		System.out.println("No");
+	}
+
+}
+}
+
 
 
 
