@@ -162,6 +162,39 @@ public class Substring {
 
 }
 }
+8)Input
+A single string S.
+Output
+Print "YES", if the string is a pangram, else print "NO".
+Constraints
+1 ≤ S.length ≤ 100
+Sample Input
+QuickWaftingZephyrsVexBoldJim
+Sample Output
+YES
+sol:
+import java.util.*;
+
+class Panagram{
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		String s=scan.nextLine();
+		String res=isPangram(s)?"Yes":"No";
+		System.out.println(res);
+		
+		
+	}
+	public static boolean isPangram(String s) {
+		Set<Character> letters=new HashSet<>();
+		for(char ch:s.toCharArray()) {
+			ch=Character.toLowerCase(ch);
+			if(Character.isLetter(ch)) {
+				letters.add(ch);
+			}
+		}
+		return letters.size()==26;
+	}
+}
 
 
 
