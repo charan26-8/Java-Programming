@@ -195,6 +195,33 @@ class Panagram{
 		return letters.size()==26;
 	}
 }
+9)Input
+Single integer N
+Output
+Maximum number of groups can be formed
+Constraints
+1<=N<100000
+Sample Input
+6
+Sample Output
+2
+sol):
+import java.util.Scanner;
+
+public class  Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the number of students
+        int N = scanner.nextInt();
+
+        // Calculate the maximum number of groups
+        int maxGroups = (N - 2) / 3 + 1;
+
+        // Print the maximum number of groups
+        System.out.println(maxGroups);
+    }
+}
 
 
 
