@@ -222,6 +222,54 @@ public class  Main {
         System.out.println(maxGroups);
     }
 }
+10)Input
+A single integer N.
+Output
+Print the lexicographically smallest string of length N.
+Constraints
+1 ≤ N ≤ 26
+Sample Input
+2
+Sample Output
+ab
+import java.util.Scanner;
+public class HappyString {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the length of the string
+        int N = scanner.nextInt();
+
+        // Generate and print the lexicographically smallest happy string
+        String happyString = generateHappyString(N);
+        System.out.println(happyString);
+    }
+
+    // Function to generate the lexicographically smallest happy string
+    private static String generateHappyString(int N) {
+        StringBuilder happyString = new StringBuilder();
+
+        // Start with 'a'
+        char currentChar = 'a';
+
+        // Iterate through each position in the string
+        for (int i = 0; i < N; i++) {
+            // Append the current character to the string
+            happyString.append(currentChar);
+
+            // Move to the next character
+            currentChar++;
+            if(currentChar>'z') {
+            	currentChar='a';//break ;//current char will repeat up to the given value
+            }
+        }
+
+        return happyString.toString();
+    }
+}
+
+
+
 
 
 
