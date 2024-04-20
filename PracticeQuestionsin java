@@ -144,18 +144,12 @@ sol:
 import java.util.Scanner;
 public class Substring {
 	public static void main(String[] args) {
-		
-	
 	Scanner scan=new Scanner(System.in);
-	
 	System.out.println("Enter a letters to check Whether it is substring or not:");
-	 
 	String input =scan.next();
 	String subString=scan.next();
-	
 	if(input.contains(subString)) {
 		System.out.println("Yes");
-		
 	}else {
 		System.out.println("No");
 	}
@@ -181,8 +175,6 @@ class Panagram{
 		String s=scan.nextLine();
 		String res=isPangram(s)?"Yes":"No";
 		System.out.println(res);
-		
-		
 	}
 	public static boolean isPangram(String s) {
 		Set<Character> letters=new HashSet<>();
@@ -207,17 +199,13 @@ Sample Output
 2
 sol):
 import java.util.Scanner;
-
 public class  Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         // Read the number of students
         int N = scanner.nextInt();
-
         // Calculate the maximum number of groups
-        int maxGroups = (N - 2) / 3 + 1;
-
+        int maxGroups = (N - 2) / 3 + 1
         // Print the maximum number of groups
         System.out.println(maxGroups);
     }
@@ -236,37 +224,105 @@ import java.util.Scanner;
 public class HappyString {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         // Read the length of the string
         int N = scanner.nextInt();
-
-        // Generate and print the lexicographically smallest happy string
+       // Generate and print the lexicographically smallest happy string
         String happyString = generateHappyString(N);
         System.out.println(happyString);
     }
-
-    // Function to generate the lexicographically smallest happy string
+   // Function to generate the lexicographically smallest happy string
     private static String generateHappyString(int N) {
         StringBuilder happyString = new StringBuilder();
-
         // Start with 'a'
         char currentChar = 'a';
-
         // Iterate through each position in the string
         for (int i = 0; i < N; i++) {
             // Append the current character to the string
             happyString.append(currentChar);
-
-            // Move to the next character
+          // Move to the next character
             currentChar++;
             if(currentChar>'z') {
             	currentChar='a';//break ;//current char will repeat up to the given value
             }
         }
-
-        return happyString.toString();
+         return happyString.toString();
     }
 }
+11)Input:
+First line contains N and K.
+Second line contains N integers denoting the array.
+Output:
+Print the array after the rotation.
+Constraints:
+1 <= N, K <= 100000
+1 <= Arr[i] <= 10^9
+Sample Input:
+5 2
+1 2 3 4 5
+Sample Output:
+4 5 1 2 3
+sol)
+import java.util.Scanner;
+public class Main
+{
+  public static void main (String[]args)
+  {
+    Scanner scanner = new Scanner (System.in);
+    // Input N and K
+	int N = scanner.nextInt ();
+    int K = scanner.nextInt ();
+    // Input array elements
+	int[] arr = new int[N];
+    for (int i = 0; i < N; i++)
+	  {
+		arr[i] = scanner.nextInt ();
+      }
+  // Rotate the array rightwards by K rotations
+	rotateArray (arr, K);
+ // Print the rotated array
+	for (int i = 0; i < N; i++)
+	  {
+       System.out.print (arr[i] + " ");
+      }
+
+	scanner.close ();
+
+  }
+
+  // Function to rotate the array rightwards by K rotations
+  private static void rotateArray (int[]arr, int K)
+  {
+
+	int N = arr.length;
+   // Handle cases where K is greater than array length
+	K = K % N;
+   // Create a temporary array to store rotated elements
+	int[] temp = new int[N];
+    // Copy the last K elements to temp
+	for (int i = 0; i < K; i++)
+	  {
+
+		temp[i] = arr[N - K + i];
+
+	  }
+   // Copy the first N-K elements to the end of temp
+	for (int i = K; i < N; i++)
+	  {
+
+		temp[i] = arr[i - K];
+
+	  }
+
+	// Copy elements of temp back to the original array
+	for (int i = 0; i < N; i++)
+	  {
+
+		arr[i] = temp[i];
+
+	  }
+  }
+}
+
 
 
 
