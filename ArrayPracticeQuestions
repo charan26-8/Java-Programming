@@ -87,7 +87,7 @@ public class Leftarrayrotate {
 			for(j=0;j<a.length-1;j++) {
 				a[j]=a[j+1];
 			}
-			a[j]=temp;
+			a[a.length-1]=temp;
 		}
 		System.out.println("After Array rotation to left");
 		for(int i=0;i<a.length;i++) {
