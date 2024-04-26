@@ -96,4 +96,49 @@ public class Leftarrayrotate {
 	}
 
 }
+4)Proam to print the duplicate elements of an array
+solution:
+Method1: using collections:
+import java.util.HashSet;//It is used to remove duplicates in an array
+import java.util.Set;
+public class DuplicatesandremoveDuplicates {
+	public static void main(String[] args) {
+		//int a[]= {1,2,32,2,4,8,2,1,8};
+		String a[]= {"Java","java","Hello","Hello","Java"};
+		Set<String> uset=new HashSet<String>();
+		Set<String> dupset=new HashSet<String>();
+		for(String val:a) {
+		if(!uset.add(val)){
+		    dupset.add(val);
+			//uset.add(val);
+		}
+	}
+		System.out.println(uset);
+		System.out.print(dupset);
+	}
+}
+Method2:
+import java.util.Scanner;
+public class DuplicatesandremoveDuplicates {  
+public static void main(String[] args) { 
+	Scanner scan=new Scanner(System.in);
+        //Initialize array  
+        //int [] arr ={1, 2, 3, 4, 2, 7, 8, 8, 3};
+	System.out.print("Enter size of an array: ");
+	int size=scan.nextInt();
+	System.out.print("Enter the elements of an array: ");
+	int a[]=new int[size];
+	for(int i=0;i<a.length;i++) {
+		a[i]=scan.nextInt();
+	}
+	System.out.println("Duplicate elements in given array: ");  
+        //Searches for duplicate element  
+        for(int i = 0; i < a.length; i++) {  
+            for(int j = i + 1; j < a.length; j++) {  
+                if(a[i] == a[j])  
+                    System.out.println(a[j]);  
+            }  
+        }  
+    }  
+} 
 
