@@ -167,5 +167,19 @@ public class Main
 	  
 	}
 }
+6)Program to print the elements of an array present on even position
+solution:
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int a[]={1,2,3,4,5};
+	    for(int i=1;i<a.length;i+=2){
+	        System.out.print(a[i]+" ");
+	    }
+	    
+		
+	}
+}
 
 
