@@ -225,6 +225,70 @@ public class Main
 		
 	}
 }
+8)Program to print the largest element in an array
+solution:
+class Main{
+    public static void main (String[] args) {
+        int a[]={23,76,42,90,86};
+        int max=a[0];
+        for(int i=1;i<a.length;i++){
+            if(a[i]>max){
+                max=a[i];
+            }
+        }
+        System.out.println("Largest element in the given array ELements:"+max);
+    }
+}
+9)Program to print the smallest element in an array 
+solution:
+class Main{
+    public static void main (String[] args) {
+        int a[]={23,76,42,90,86};
+        int max=a[0];
+        for(int i=1;i<a.length;i++){
+            if(a[i]<max){
+                max=a[i];
+            }
+        }
+        System.out.println("Largest element in the given array ELements:"+max);
+    }
+}
+10)Java Program to print the number of elements present in an array
+solution:
+import java.util.Scanner;
+public class ElementCounter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+         // Input the size of the array
+        System.out.print("Enter the size of the array: ");
+        int size = scanner.nextInt();
+        // Create an array of given size
+        int[] array = new int[size];
+         // Input array elements
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < size; i++) {
+            System.out.print("Element " + (i + 1) + ": ");
+            array[i] = scanner.nextInt();
+        }
+     // Print the number of elements in the array
+        System.out.println("Number of elements in the array: " + array.length);
+   }
+}
+11)Java Program to print the sum of all the items of the array
+solution:
+public class SumOfArray {  
+    public static void main(String[] args) {  
+        //Initialize array  
+        int [] arr = new int [] {1, 2, 3, 4, 5};  
+        int sum = 0;  
+        //Loop through the array to calculate sum of elements  
+        for (int i = 0; i < arr.length; i++) {  
+           sum = sum + arr[i];  
+        }  
+        System.out.println("Sum of all the elements of an array: " + sum);  
+    }  
+}  
+
 
 
 
