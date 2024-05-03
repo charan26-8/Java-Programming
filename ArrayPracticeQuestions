@@ -376,7 +376,7 @@ System.out.print("Enter the size of the array: ");
 	        }
 	    }
 // Printing the sorted array
-        System.out.println("Array elements in ascending order:");
+        System.out.println("Array elements in descending order:");
         for (int num : arr) {
             System.out.print(num + " ");
         }
