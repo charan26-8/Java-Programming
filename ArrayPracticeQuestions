@@ -382,6 +382,112 @@ System.out.print("Enter the size of the array: ");
         }
     }
 }
+15)Java Program to find Third Largest Number in an Array
+solution:
+import java.util.*;
+class Main{
+    public static int getThirdlargest(int a[],int total){
+        Arrays.sort(a);
+        return a[total-3];
+    }
+    public static void main (String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the number of elements:");
+       int n=sc.nextInt();
+       System.out.print("Enter the elements:");
+       int a[]=new int[n];
+       for(int i=0;i<n;i++){
+           a[i]=sc.nextInt();
+           
+       }
+       System.out.print("Third largest :"+getThirdlargest(a,n));
+    }
+}
+16)Java Program to find Second Largest Number in an Array
+solution:
+import java.util.*;
+class Main{
+    public static int getSecondlargest(int a[],int total){
+        Arrays.sort(a);
+        return a[total-2];
+    }
+    public static void main (String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the number of elements:");
+       int n=sc.nextInt();
+       System.out.print("Enter the elements:");
+       int a[]=new int[n];
+       for(int i=0;i<n;i++){
+           a[i]=sc.nextInt();
+           
+       }
+       System.out.print("Second largest :"+getSecondlargest(a,n));
+    }
+}
+17)Java Program to find Largest Number in an Array
+solution:
+import java.util.*;
+class Main{
+    public static int getFirstlargest(int a[],int total){
+        Arrays.sort(a);
+        return a[total-1];
+    }
+    public static void main (String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the number of elements:");
+       int n=sc.nextInt();
+       System.out.print("Enter the elements:");
+       int a[]=new int[n];
+       for(int i=0;i<n;i++){
+           a[i]=sc.nextInt();
+           }
+       System.out.print("First largest :"+getFirstlargest(a,n));
+    }
+}
+18)Java Program to find Second Smallest Number in an Array
+solution:
+import java.util.*;
+class Main{
+    public static int getSecondsmallest(int a[],int total){
+        Arrays.sort(a);
+        return a[1];
+    }
+    public static void main (String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the number of elements:");
+       int n=sc.nextInt();
+       System.out.print("Enter the elements:");
+       int a[]=new int[n];
+       for(int i=0;i<n;i++){
+           a[i]=sc.nextInt();
+           }
+       System.out.print("Second smallest:"+getSecondsmallest(a,n));
+    }
+}
+19)Java Program to find Smallest Number in an Array
+solution:
+import java.util.*;
+class Main{
+    public static int getSmallest(int a[],int total){
+        Arrays.sort(a);
+        return a[0];
+    }
+    public static void main (String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the number of elements:");
+       int n=sc.nextInt();
+       System.out.print("Enter the elements:");
+       int a[]=new int[n];
+       for(int i=0;i<n;i++){
+           a[i]=sc.nextInt();
+           }
+       System.out.print("Smallest:"+getSmallest(a,n));
+    }
+}
+
+
+
+
 
 
 
