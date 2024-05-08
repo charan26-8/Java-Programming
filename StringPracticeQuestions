@@ -15,3 +15,30 @@ public class CharacterCount {
          System.out.println("Total number of characters in the string: " + charCount);
         }
 }
+2)Java Program to Count the Total Number of Punctuation Characters Exists in a String
+solu:
+import java.util.Scanner;
+class Main{
+    public static void main (String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the String");
+        String s=sc.nextLine();
+        int count=0;
+        for(int i=0;i<s.length();i++){
+            char ch=s.charAt(i);
+            if(isPunctuate(ch)){
+                count++;
+            }
+        }
+        System.out.println("Total no of punctuations are:"+count);
+    }
+    public static boolean isPunctuate(char ch){
+        return (ch == '!' || ch == '\"' || ch == '#' || ch == '$' || ch == '%' || ch == '&' || 
+                ch == '\'' || ch == '(' || ch == ')' || ch == '*' || ch == '+' || ch == ',' || 
+                ch == '-' || ch == '.' || ch == '/' || ch == ':' || ch == ';' || ch == '<' || 
+                ch == '=' || ch == '>' || ch == '?' || ch == '@' || ch == '[' || ch == '\\' || 
+                ch == ']' || ch == '^' || ch == '_' || ch == '`' || ch == '{' || ch == '|' || 
+                ch == '}' || ch == '~');
+    }
+    
+}
