@@ -98,4 +98,30 @@ public class Anagram {
 		}
 	}
 }
+5)Java Program to divide a string in 'N' equal parts
+sol:
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the string:");
+        String input = scanner.nextLine();
+        System.out.println("Enter the number of parts to divide the string into:");
+        int parts = scanner.nextInt();
+        if (input.length() % parts != 0) {
+            System.out.println("Cannot divide the string into equal parts.");
+            return;
+        }
+        int partLength = input.length() / parts;
+        int startIndex = 0;
+        int endIndex = partLength;
+        System.out.println("Dividing the string into " + parts + " equal parts:");
+        for (int i = 0; i < parts; i++) {
+            String part = input.substring(startIndex, endIndex);
+            System.out.println("Part " + (i + 1) + ": " + part);
+            startIndex = endIndex;
+            endIndex += partLength;
+        }
+    }
+}
 
