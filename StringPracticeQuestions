@@ -139,4 +139,36 @@ public class Main {
         }
    }
 }
+7)Java Program to find the longest repeating sequence in a string
+sol:
+import java.util.Scanner;
+public class LongestSequence {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String s = scanner.nextLine();
+        // Find and print the longest repeating sequence
+        String longestRepeatingSequence = findLongestRepeatingSequence(s);
+        System.out.println("Longest Repeating Sequence: " + longestRepeatingSequence);
+      }
+      public static String findLongestRepeatingSequence(String str) {
+        int n = str.length();
+        String longestSeq = "";
+        // Iterate over all substrings
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                int length = 0;
+                 // Compare substrings starting at i and j
+                while (j + length < n && str.charAt(i + length) == str.charAt(j + length)) {
+                    length++;
+                }
+                  // Update longestSeq if a longer repeating sequence is found
+                if (length > longestSeq.length()) {
+                    longestSeq = str.substring(i, i + length);
+                }
+            }
+        }
+       return longestSeq;
+    }
+}
 
