@@ -171,4 +171,32 @@ public class LongestSequence {
        return longestSeq;
     }
 }
+8)Java Program to find all the permutations of a string
+sol:
+import java.util.*;
+public class Permutations {
+	static void permutations(char[] ar,int fi) {
+		if(fi==ar.length-1) {
+			System.out.println(ar);
+			return ;
+		}
+		for(int i=fi;i<ar.length;i++) {
+			swap(ar,i,fi);
+			permutations(ar,fi+1);
+			swap(ar,i,fi);
+		}
+	}
+   static void swap(char[] ar,int i,int fi) {
+	   char temp=ar[i];
+	   ar[i]=ar[fi];
+	   ar[fi]=temp;
+   }
+public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+    System.out.print("Enter string to generate its permutations: ");
+    String str = scn.next(); //String input from the user
+    permutations(str.toCharArray(), 0);
+  }
+  }
+
 
