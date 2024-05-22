@@ -198,5 +198,29 @@ public static void main(String[] args) {
     permutations(str.toCharArray(), 0);
   }
   }
+9)Java Program to remove all the white spaces from a string
+sol:
+import java.util.Scanner;
+
+public class RemoveWhiteSpaces {
+    public static void main(String[] args) {
+        // Create a Scanner object for reading user input
+        Scanner scanner = new Scanner(System.in);
+        
+        // Prompt the user to enter a string
+        System.out.println("Enter a string:");
+        String input = scanner.nextLine();
+        
+        // Remove all white spaces using replaceAll method
+        String result = input.replaceAll("\\s+", "");
+        
+        // Print the result
+        System.out.println("String after removing white spaces: \"" + result + "\"");
+        
+        // Close the scanner
+        scanner.close();
+    }
+}
+
 
 
