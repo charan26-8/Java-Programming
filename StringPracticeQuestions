@@ -246,5 +246,25 @@ public class Main {
         return new String(ch);
     }
 }
+11)Java Program to replace the spaces of a string with a specific character
+sol:
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+         System.out.println("Enter a string:");
+        String input = scanner.nextLine();
+        System.out.println("Enter the character to replace spaces with:");
+        char ch = scanner.next().charAt(0);
+        String replacedString = replaceSpaces(input,ch);
+        System.out.println("String with spaces replaced:");
+        System.out.println(replacedString);
+    }
+     public static String replaceSpaces(String str, char ch) {
+        return str.replace(' ', ch);
+    }
+}
+
+
 
 
