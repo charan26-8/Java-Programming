@@ -311,6 +311,46 @@ public class Main
 	    }
 	}
 }
+14)Java Program to find maximum and minimum occurring character in a string.
+sol)
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+public class CharacterOccurrence {
+       public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String str = scanner.nextLine();
+       Map<Character, Integer> charCount = new HashMap<>();
+        // Count occurrences of each character in the string
+        for (char c : str.toCharArray()) {
+            if (Character.isLetter(c)) {
+                charCount.put(c, charCount.getOrDefault(c, 0) + 1);
+            }
+        }
+        // Find the maximum occurring character
+        char maxChar = 0;
+        int maxCount = Integer.MIN_VALUE;
+        for (Map.Entry<Character, Integer> entry : charCount.entrySet()) {
+            if (entry.getValue() > maxCount) {
+                maxCount = entry.getValue();
+                maxChar = entry.getKey();
+            }
+        }
+         // Find the minimum occurring character
+        char minChar = 0;
+        int minCount = Integer.MAX_VALUE;
+        for (Map.Entry<Character, Integer> entry : charCount.entrySet()) {
+            if (entry.getValue() < minCount) {
+                minCount = entry.getValue();
+                minChar = entry.getKey();
+            }
+        }
+        System.out.println("Maximum occurring character: " + maxChar);
+        System.out.println("Minimum occurring character: " + minChar);
+    }
+}
+
 
 
 
