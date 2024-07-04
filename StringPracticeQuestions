@@ -264,27 +264,25 @@ public class Main {
         return str.replace(' ', ch);
     }
 }
-12)Java Program to determine whether a given string is palindrome
+12)Java Program to determine whether a given string is palindrome or Reverse a String Both are same.
 sol:
 import java.util.Scanner;
 public class Main
 {
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter the String:");
-		String str=sc.next();
-		String orgstr=str;
-		String revstr="";
-		int len=str.length();
-		for(int i=len-1;i>=0;i--){
-		    revstr=revstr+str.charAt(i);
-		}
-		if(orgstr.equals(revstr)){
-		    System.out.println("String is an palindrome:"+orgstr);
-		}else{
-		    System.out.println("String is not an palindrome:"+orgstr);
-		}
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the String:");
+	String s =sc.next();
+	String rev="";
+	for(int i=s.length()-1;i>=0;i--){
+	    rev=rev+s.charAt(i);
 	}
+	if(rev.equals(s)){
+	    System.out.println("Yes");
+	}else{
+	System.out.println("No");
+	}
+}
 }
 13)Java Program to determine whether one string is a rotation of another
 sol:
