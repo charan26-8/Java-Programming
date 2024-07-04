@@ -322,6 +322,164 @@ public class Main
 	  }
   }
 }
+12)Suppose input is Day 14 ,Month is January,Year is 2023 calculate The day of the week is??(like tuesday,wednesday)
+sol:
+
+import java.time.LocalDate;
+import java.time.DayOfWeek;
+import java.util.Scanner;
+public class DayOfWeekCalculator {
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter month (1-12): ");
+        int month = sc.nextInt();
+        System.out.print("Enter day (1-31): ");
+        int day = sc.nextInt();
+        System.out.print("Enter year (e.g., 2017): ");
+        int year = sc.nextInt();
+        LocalDate date = LocalDate.of(year, month, day);
+        DayOfWeek dayOfWeek = date.getDayOfWeek();
+        String dayOfWeekString = dayOfWeek.name();
+        System.out.println("The day of the week on " + month + "/" + day + "/" + year + " is " + dayOfWeekString);
+    }
+}
+13)Covert Integer to roman values like I,IV,V,X,L,C,D,M
+solu:
+import java.util.Scanner;
+public class numberToRoman {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number to convert to Roman numeral: ");
+        int number = sc.nextInt();
+        if (number < 1 || number > 3999) {
+            System.out.println("Number out of range. Please enter a number between 1 and 3999.");
+        } else {
+            String romanNumeral = convertToRoman(number);
+            System.out.println("The Roman numeral is: " + romanNumeral);
+        }
+    }
+    public static String convertToRoman(int number) {
+        // Mapping of Roman numerals
+        int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String[] symbols = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+        StringBuilder roman = new StringBuilder();
+        for (int i = 0; i < values.length; i++) {
+            while (number >= values[i]) {
+                number -= values[i];
+                roman.append(symbols[i]);
+            }
+        }
+           return roman.toString();
+    }
+}
+14)Prime Number to make sum of its digits using List.
+sol:
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class PrimeSum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        List<Integer> num = new ArrayList<>();
+        System.out.println("Enter numbers");
+        String str = sc.nextLine();
+        String[] str1 = str.split(" ");
+        for (String s : str1) {
+            num.add(Integer.parseInt(s));
+        }
+        int sum = sumOfPrimeNumbers(num);
+        System.out.println("Sum of Prime  numbers: " + sum);
+        }
+    public static int sumOfPrimeNumbers(List<Integer> num) {
+        int sum = 0;
+        for (int n : num) {
+            if (isPrime(n)) {
+                sum += n;
+            }
+        }
+        return sum;
+    }
+    public static boolean isPrime(int n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+15).Find even number and make it sum with List.
+sol:
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class ArraySum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        List<Integer> num = new ArrayList<>();
+        System.out.println("Enter numbers");
+        String str = sc.nextLine();
+        String[] str1 = str.split(" ");
+        for (String s : str1) {
+            num.add(Integer.parseInt(s));
+        }
+        int sum = sumOfEvenNumbers(num);
+        System.out.println("Sum of even numbers: " + sum);
+        }
+        public static int sumOfEvenNumbers(List<Integer> num) {
+        int sum = 0;
+        for (int n : num) {
+            if (n % 2 == 0) {
+                sum += n;
+            }
+        }
+        return sum;
+    }
+}
+16)Suppose, if input is 10 Print first 10 prime numbers through the given input.
+sol:
+import java.util.Scanner;
+public class PrimeNumberInput {
+    public static void main(String[] args) {
+    	Scanner sc=new Scanner(System.in);
+    	System.out.println("Enter a Number:");
+    	int n=sc.nextInt();
+        int count = 0;
+        int num = 2;
+        while (count <n) {
+            if (isPrime(num)) {
+                System.out.print(num+" ");
+                count++;
+            }
+            num++;
+        }
+    }
+    public static boolean isPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 
